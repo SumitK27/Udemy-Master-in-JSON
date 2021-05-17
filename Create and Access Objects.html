@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Accessing JSON Objects</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var myObj0 = {
+            "name" : "Niko",
+            "age" : 21,
+            "car" : null
+        };
+
+        document.write("<h2>Individual Values</h2>");
+        document.write("Name: " + myObj0.name + "<br>");
+        document.write("Age: " + myObj0.age + "<br>");
+        document.write("Car: " + myObj0.car + "<br>");
+
+        
+        document.write("<h2>Values using For Loop</h2>");
+        for(x in myObj0)
+        {
+            document.write(myObj0[x] + "<br>");
+        }
+
+
+        document.write("<h2>Values stored in a variable</h2>");
+        var values = "";
+        for(x in myObj0)
+        {
+            values += myObj0[x] + " ";
+        }
+        document.write(values);
+
+
+        document.write("<h2>Nested JSON Objects</h2>");
+        var myObj1 = {
+            "name" : "Niko",
+            "age" : 21,
+            "cars" : {"car1" : "Fiat", "car2" : "Mercedes", "car3" : "BMW"}
+        };
+        var data = myObj1.name + " whose age is " + myObj1.age + " owns ";
+        for(x in myObj1.cars)
+        {
+            data += myObj1.cars[x] + " ";
+        }
+        
+        document.write(data);
+
+
+        document.write("<h2>Array</h2>");
+        var myObj2 = {
+            "name" : ["Niko", "Tommy", "Frank"]
+        };
+        var names = "";
+        for (i in myObj2.name) {
+            names += myObj2.name[i] + " ";
+        }
+        document.write("Names: " + names); 
+        
+        
+        document.write("<h2>Nested Arrays</h2>");
+        var array = [
+            {
+                "name" : "Ford",
+                "model" : ["Fiesta", "Focus", "Mustang"]
+            },
+            {
+                "name" : "BMW",
+                "model" : ["320", "X3", "X5"]
+            },
+            {
+                "name" : "Fiat",
+                "model" : ["500", "Panda"]
+            }
+        ];
+        var myObj3 = {
+            "cars" : array
+        };
+        var cars = "";
+        for (i in myObj3.cars) {
+            cars += "<h4>" + myObj3.cars[i].name + "</h4>";
+            for (j in myObj3.cars[i].model) {
+                cars += myObj3.cars[i].model[j] + " ";
+            }
+        }
+        document.write(cars);
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "name" :"Niko",
+    "age" : 30,
+    "object" : {
+        "name" : "ABC",
+        "age" : 30,
+        "city" : "New York"
+    },
+    "dataTypes" : ["String", "Number", "Object", "Array", "Boolean", "Null"],
+    "sale" : true,
+    "middleName" : null
+}

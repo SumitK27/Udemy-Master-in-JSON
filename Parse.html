@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse</title>
+</head>
+<body>
+    <h2>Convert JSON String return from server to a JavaScript Object</h2>
+    <script type="text/javascript">
+        var myJSONString = '{"name":"Niko", "age":"21", "city":"Pune"}';
+        var myJSObject = JSON.parse(myJSONString);
+        document.write(myJSObject.name + " " + myJSObject.age + " " + myJSObject.city);
+    </script>
+</body>
+</html>

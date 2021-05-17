@@ -1,0 +1,14 @@
+JSON - JavaScript Object Notation
+JSON objects are used for transferring data between server and client
+XML is also used for same purpose
+
+
+JSON is lightweight data exchange format
+JSON is "self describing" and easy to understand
+JSON is language independent
+JSON supports Arrays
+Parsing JSON object is easier JSON.parse()
+
+
+DataTypes Supported:
+String, Number, Object, Array, Boolean, null
